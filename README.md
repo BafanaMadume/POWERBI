@@ -29,4 +29,22 @@ For Creating reports with Power BI ,we need the three primary components to Powe
 4. Publish report to Power BI service
 5. Distribute and manage reports in the Power BI service
 
-* From Power BI it allows us to create high-level dashboards that drill down to reports and apps to easily group related reports to users in a simple format
+* From Power BI it allows us to create high-level dashboards that drill down to reports and apps to easily group related reports to users in a simple format.
+
+## BUILDING BLOCKS OF POWER BI
+* 2 Building Blocks of Power BI
+  1. Semantic models
+  2. Visualizations
+
+## 1.CREATE A SEMANTIC MODEL
+Semantic model consists of all connected data ,transformations,relationships and calculations. 
+* we first connect to ``data`` ,``transform data`` ,and ``create relationships and calculations`` to create a semantic model
+* Connect to as many data sources that you need,then clean and transform the data to your needs,
+* Add relationships between tables and calculations to extends the semantic model
+
+## CREATE VISUALIZATIONS IN A REPORT
+* you add it to canvas for a report page,choose your visuaization to build pages in your report
+* valuable features of power bi reports is the interactivity between visuals.where consumers can select different data points in the visual and see how that affects the other visualsj
+
+## CREATE A DASHBOARD
+You can also create dashboards after you,ve published a report.In a way dahsboards consists of a single page made up of tiles.Add tiles to a dashboard by pinning a visual in a report to the dashboard.Tiles aren't interactive like visuals ,so in a way when a user interacts with the tile ,they go to the underlying report for more information
