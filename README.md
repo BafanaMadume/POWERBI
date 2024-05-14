@@ -87,3 +87,14 @@ Power Bi offers a complete data analytics solution that includes data preparatio
 2. What can Power BI do to help you effectively use your data?
    - analyze sales data to better allocate resources and placr orders,optimizing operations
    - Analyze customer data to better target and promote specific items to specific customers
+3. What are the three modalities of Power BI designed to let people create, share, and consume business insights in the way that serves them, or their role, most effectively?
+   = Desktop ,service and mobile Apps
+4. What is the purpose of Power BI's insights feature?
+   = To easily identify insights such as anomalies and trends in your data
+
+
+# EXPLORE WHAT POWER BI CAN DO
+Power Bi can help make your job easier and more effective at the same time 
+
+How To Know if you're a power  BI consumer
+![Screenshot 2024-05-14 111634](https://github.com/BafanaMadume/POWERBI/assets/141032267/96353a36-1923-40eb-b6d7-d1a54a67e35f)
