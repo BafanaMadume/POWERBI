@@ -98,3 +98,42 @@ Power Bi can help make your job easier and more effective at the same time
 
 How To Know if you're a power  BI consumer
 ![Screenshot 2024-05-14 111634](https://github.com/BafanaMadume/POWERBI/assets/141032267/96353a36-1923-40eb-b6d7-d1a54a67e35f)
+
+# Open and view the dashboard and report
+
+1. Select one of the column chart or line chart tiles to open the detailed report.
+
+- To return to the dashboard, select the back arrow of your browser.
+
+## Create an Alert
+
+- Select Manage alerts
+  
+- Select + Add alert rule.
+
+- Scroll down to the Threshold field and type in 49000.
+
+- Select the checkbox for At most every 24 hours.
+
+- Select the checkbox for Send me email, too.
+
+- Select the Save and close
+
+---
+# GET DATA FROM FILES
+* One possible file format is a ``flat file`` .A flat file is a type of file that has only one data table and every row of data is in the same structure,the file does not contain hierarchies
+* comma-separated values (.csv)
+* delimited text(.txt)
+* Fixed width files
+
+Power BI Desktop allows one to get data from many types of files,the list is available under options when you use the **Get Data** feature un Power BI Desktop.
+
+## FLAT FILE LOCATION
+the first step is to determine which file location one wants to use to export and store your data
+
+* **Local** = we import data from a local file into powerBI.The file is not moved into Power BI ,and a link does not remain to it.
+  -A new Semantic model is created in Power BI and data from the excel file is loaded into it
+  
+* **OneDrive*** - Personal = You can use data from files on a personal OneDrive account, and get many of the same benefits that you would with OneDrive for Business. However, you'll need to sign in with your personal OneDrive account, and select the Keep me signed in option. Check with your system administrator to determine whether this type of connection is allowed in your organization.
+
+* **SharePoint** -Team Sites
