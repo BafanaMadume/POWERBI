@@ -144,4 +144,50 @@ the first step is to determine which file location one wants to use to export an
 *   You can select a table or entity to preview its contents, to ensure that the correct data is loaded into the Power BI model.
 * Select the check box(es) of the table(s) that you want to bring in to Power BI. This selection activates the Load and Transform Data buttons as shown in the following image.
 
-## Power Query
+## Change the Source File
+* You might have to change the location of a source file for a data source during development, or if a file storage location changes.
+
+* Power Query provides many ways for you to accomplish this task, so that you can make this type of change when needed.
+
+* Data source settings
+* Query settings
+* Advanced Editor
+
+## Get Data From Relational Data Sources
+
+if your organization uses a relational database for sales ,we can use Power Bi desktop to connect directly to the database instead of using exported flat files
+* connecting Power Bi to your database will help you monitor the progress of your business and identify trends
+* Power BI desktop can connect to many relational databases that are either in the cloud or on-premises.
+
+## Connect To data in a Relational database
+
+We can use the GET DATA feature in Power BI Desktop and select the applicable option for your relational database
+![Screenshot 2024-05-15 132205](https://github.com/BafanaMadume/POWERBI/assets/141032267/d8fc0b26-d972-421c-9ce9-c9e8941c2d3c)
+
+## SELECT DATA TO IMPORT
+* After the database has been connected to Power BI Desktop, the Navigator window displays the data that is available in your data source (the SQL database in this example)
+* Select the check box(es) of the table(s) that you want to bring in to Power BI Desktop, and then select either the Load or Transform Data option.
+
+* ``LOAD`` = automatically load your data into a power BI model in its current state
+* ``Transform Data`` =  Open your data in Microsoft Power Query, where you can perform actions such as deleting unnecessary rows or columns, grouping your data, removing errors, and many other data quality tasks
+
+## IMPORT DATA BY WRITING AN SQL QUERY
+we can import data by writing an sql query to specify only the tables and columns that one needs
+
+## WRITE AN SQL STATEMENT
+SQL stands for Structured Query Language and is a standardized programming language that is used to manage relational databases and perform various data management operations
+
+* SQL query starts with a Select statement, which allows you to choose the specific fields that you want to pull from your database.
+* FROM specifies the name of the table that you want to pull the data from.
+* When using an SQL query to import data, try to avoid using the wildcard character (*) in your query. If you use the wildcard character (*) in your SELECT statement, you import all columns that you don't need from the specified table.
+* WHERE clause. This clause will filter the rows to pick only filtered records that you want.
+
+## CREATE DYNAMIC REPORTS WITH PARMETERS
+* Dynamic reports are reports in which the data can be changed by a developer according to user specifications
+* Dynamic reports are valuable because a single report can be used for multiple purposes.
+* If you use dynamic reports, you'll have fewer individual reports to create, which will save organizational time and resources.
+* You can use parameters by determining the values that you want to see data for in the report, and the report updates accordingly by filtering the data for you.
+* Creating dynamic reports allows you to give users more power over the data that is displayed in your reports; they can change the data source and filter the data by themselves.
+
+## Create Dynamic ReportsFor Individual Values
+* To create a dynamic report, you first need to write your SQL query.Then use the Get data feature in Power BI Desktop to connect to the database
