@@ -191,3 +191,19 @@ SQL stands for Structured Query Language and is a standardized programming langu
 
 ## Create Dynamic ReportsFor Individual Values
 * To create a dynamic report, you first need to write your SQL query.Then use the Get data feature in Power BI Desktop to connect to the database
+
+Now, you need to adjust the code in SQL query to assess your new parameter:
+
+1. Right-click Query1 and then select Advanced editor.
+
+2. Replace the existing value in the execute statement with an ampersand (&) followed by your parameter name (SalesPerson), as illustrated in the following image.
+3. Make sure that no errors are shown at bottom of the window and then select Done.
+4. To confirm that the query was run, you can run a test by selecting the parameter query and entering a new value in the Current Value box.
+5. A warning icon might display next to the query. If so, select that query to view the warning message, which states that permission is required to run this native database query. Select Edit Permission and then select Run.
+6. Select Close and Apply to return to the report editor.
+
+Apply parameter to the Report
+1. Select Edit queries > Edit parameters.
+2. On the Edit Parameters window, enter a new value and then select OK.
+3. Select Apply changes and then run the native query again.
+
