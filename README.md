@@ -1,4 +1,4 @@
-# POWERBI
+ # POWERBI
 
 # MICROSOFT POWER BI
 
@@ -271,3 +271,65 @@ access storage modes by switching to the Model view, selecting a data table, and
 
 Analysis Services models have calculations already created.
 If you don’t need an entire table, you can query the data directly. Instead of using Transact-SQL (T-SQL) to query the data, like you would in SQL Server, you can use multi-dimensional expressions (MDX) or data analysis expressions (DAX).
+
+## Fix Performance issues
+* Power BI provides the Performance Analyzer tool to help fix problems and streamline the process.
+* When you create preliminary visuals and filters, you notice that some tables are queried faster than others, and some filters are taking longer to process compared to others.
+
+## Optimize performance in Power Query
+* The variety of data sources that Power Query offers is wide, and the performance tuning techniques for each source are equally wide.
+*  Good SQL Server performance tuning techniques include index creation, hardware upgrades, execution plan tuning, and data compression.
+*  **Power Query ** takes advantage of good performance at the data source through a technique called Query Folding.
+
+## QUERY FoLDING
+The query folding within Power Query Editor helps you increase the performance of your Power BI reports.
+**Query folding** = the process by which the transformations and edits that you make in Power Query Editor are simultaneously tracked as native queries, or simple Select SQL statements, while you're actively making transformations.
+* The reason for implementing this process is to ensure that these transformations can take place in the original data source server and don't overwhelm Power BI computing resources
+* You can use Power Query to load data into Power BI. Then use Power Query Editor to transform your data, such as renaming or deleting columns, appending, parsing, filtering, or grouping your data.
+* when you load your data, the transformations take place independently in the original source, this ensures that performance is optimized in Power BI
+
+**Benefits to query folding**
+
+* **More efficiency in data refreshes and incremental refreshes.** When you import data tables by using query folding, Power BI is better able to allocate resources and refresh the data faster because Power BI doesn't have to run through each transformation locally.
+
+* **Automatic compatibility with DirectQuery and Dual storage modes**. All DirectQuery and Dual storage mode data sources must have the back-end server processing abilities to create a direct connection, which means that query folding is an automatic capability that you can use. If all transformations can be reduced to a single Select statement, then query folding can occur.
+
+* Query Diagnostics
+determine what bottlenecks may exist while loading and transforming your data, refreshing your data in Power Query, running SQL statements in Query Editor, and so on.
+
+To access query diagnostics in Power Query Editor, go to Tools in the Home ribbon. When you're ready to begin transforming your data or making other edits in Power Query Editor, select Start Diagnostics in the Session Diagnostics section. When you're finished, make sure that you select Stop Diagnostics.
+
+## Resolve Data import Errors
+
+When importing data into Power BI, you may encounter errors resulting from factors such as:
+* Power BI imports from numerous data sources
+* Each data source might have dozens (and sometimes hundreds) of different error messages.
+* Other components can cause errors, such as hard drives, networks, software services, and operating systems
+* Data often can't comply with any specific schema
+
+## Query Timeout Expired
+Relational source systems often have many people who are concurrently using the same data in the same database. Some relational systems and their administrators seek to limit a user from monopolizing all hardware resources by setting a query timeout.
+
+## Power BI Query Error: Timeout expired
+This error indicates that you’ve pulled too much data according to your organization’s policies. Administrators incorporate this policy to avoid slowing down a different application or suite of applications that might also be using that database.
+
+## DATA TYPE ERRORS
+Sometimes, when you import data into Power BI, the columns appear blank,The resolution to this error is unique to the data source.
+
+Instead of using this query:
+
+SELECT CustomerPostalCode FROM Sales.Customers
+
+Use this query:
+
+SELECT CAST(CustomerPostalCode as varchar(10)) FROM Sales.Customers
+
+By specifying the correct type at the data source, you eliminate many of these common data source errors.
+
+You may encounter different types of errors in Power BI that are caused by the diverse data source systems where your data resides.
+
+---
+---
+---
+
+# CLEAN ,TRANSFORM ,AND LOAD DATA IN POWER BI
