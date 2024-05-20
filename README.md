@@ -207,3 +207,67 @@ Apply parameter to the Report
 2. On the Edit Parameters window, enter a new value and then select OK.
 3. Select Apply changes and then run the native query again.
 
+## GET DATA FROM A NoSQL Database
+A NoSQL database (also referred to as non-SQL, not only SQL or non-relational) is a flexible type of database that doesn't use tables to store data.
+
+## Import a JSON file
+* it is necessary to extract and normalize the data first .it is because the JSON data is often stored in a nested or unstructured format ,which makes it difficult to analyze or report on directly.
+* Json data is often stored in a nested or unstructured format, which makes it difficult to analyze or report on directly
+* The data must be extracted and normalized before you can report on them, so you need to transform the data before loading it into Power BI Desktop.
+* After you've connected to the database account, the Navigator window opens, showing a list of databases under that account. Select the table that you want to import. 
+* The preview pane only shows Record items because all records in the document are represented as a Record type in Power BI.
+
+* Select the Edit button to open the records in Power Query.
+
+In Power Query, select the Expander button to the right side of the Column1 header, which displays the context menu with a list of fields.
+*  Select the fields that you want to load into Power BI Desktop, clear the Use original column name as prefix checkbox, and then select OK.
+
+## GET DATA FROM ONLINE SERVICES
+*  support their daily operations, organizations frequently use a range of software applications, such as SharePoint, OneDrive, Dynamics 365, Google Analytics
+*  These applications produce their own data.
+*  Power BI can combine the data from multiple applications to produce more meaningful insights and reports
+
+### CONNECT TO DATA IN AN APPLICATION
+*  connecting to data in an application, you would begin in the same way as you would when connecting to the other data sources: by selecting the Get data feature in Power BI Desktop. Then, select the option that you need from the Online Services category
+*  you've selected Connect, you'll be asked for your SharePoint URL. This URL is the one that you use to sign into your SharePoint site through a web browser. 
+
+## SELECT A STORAGE MODE
+* The most popular way to use data in Power BI is to import it into a Power BI semantic model. Importing the data means that the data is stored in the Power BI file and gets published along with the Power BI reports.
+
+#### The three different types of storage modes you can choose from:
+
+* Import
+* DirectQuery
+* Dual (Composite)
+
+access storage modes by switching to the Model view, selecting a data table, and in the resulting Properties pane, selecting which mode that you want to use from the Storage mode drop-down list.
+
+### IMPORT MODE
+* Import mode allows you to create a local Power BI copy of your semantic models from your data source.
+*  Data refreshes can be scheduled or on-demand. Import mode is the default for creating new Power BI reports.
+
+## DirectQuery mode
+* **DirectQuery** option is useful when you don't want to save local copies of your data because your data won't be cached.
+* you can query the specific tables that you'll need by using native Power BI queries, and the required data will be retrieved from the underlying data source
+*  Using this model ensures that you're always viewing the most up-to-date data, and that all security requirements are satisfied.
+
+## Dual (Composite mode)
+*  Dual mode, you can identify some data to be directly imported and other data that must be queried.
+* Any table that is brought in to your report is a product of both Import and DirectQuery modes.
+*  Using the Dual mode allows Power BI to choose the most efficient form of data retrieval.
+
+## Get data from Azure Analysis Services
+* Azure Analysis Services is a fully managed platform as a service (PaaS) that provides enterprise-grade semantic models in the cloud
+* use advanced mashup and modeling features to combine data from multiple data sources, define metrics, and secure your data in a single, trusted tabular semantic model.
+* semantic model provides an easier and faster way for users to perform ad hoc data analysis using Power BI
+
+* Getting data from Azure Analysis Services server is similar to getting data from SQL Server, in that you can:
+
+  - Authenticate to the server.
+  - Pick the model you want to use.
+  - Select which tables you need.
+
+  Notable differences between Azure Analysis Services and SQL Server are:
+
+Analysis Services models have calculations already created.
+If you don’t need an entire table, you can query the data directly. Instead of using Transact-SQL (T-SQL) to query the data, like you would in SQL Server, you can use multi-dimensional expressions (MDX) or data analysis expressions (DAX).
