@@ -406,3 +406,41 @@ key step in the data shaping process is to remove unnecessary columns
 ## SIMPLIFY THE DATA STRUCTURE
 
 ### Rename A Query
+good practice to change uncommon or unhelpful query names to names that are more obvious or that the user is more familiar with
+* if you import a product fact table into Power BI Desktop and the query name displays as FactProductTable, you might want to change it to a more user-friendly name, such as Products
+
+### REPLACE VALUES
+* Replace Values feature in Power Query Editor to replace any value with another value in a selected column.
+*  Query Settings pane. When you have completed all steps that you want to take, you can select Close & Apply to close Power Query Editor and apply your changes to your data model.
+
+### REPLACE NULL VALUES
+* If the value stays null, the averages will not calculate correctly. One solution would be to change the nulls to zero, which will produce the more accurate freight average
+
+### REMOVE DUPLICATES
+*  Can also remove duplicates from columns to only keep unique names in a selected column by using the Remove Duplicates feature in Power Query
+
+### BEST PRACTICES FOR NAMING TABLES ,COLUMNS AND VALUES
+
+* Naming conventions for tables, columns, and values have no fixed rules; however, we recommend that you use the language and abbreviations that are commonly used within your organization.
+* A best practice is to give your tables, columns, and measures descriptive business terms and replace underscores ("_") with spaces.
+* Be consistent with abbreviations, prefixes, and words like "number" and "ID."
+* Removing prefixes or suffixes that you might use in table names and instead naming them in a simple format, you will help avoid confusion.
+* When replacing values, try to imagine how those values will appear on the report. Values that are too long might be difficult to read and fit on a visual.
+* Values that are too short might be difficult to interpret.
+* Avoiding acronyms in values is also a good idea, provided that the text will fit on the visual.
+
+## EVALUATE AND CHANGE COLUMN DATA TYPES
+* When importing a table from any data source, Power BI Desktop automatically starts scanning the first 1,000 rows (default setting) and tries to detect the type of data in the columns.
+* You have a higher chance of getting data type errors when you're dealing with flat files, such as comma-separated values (.CSV) files and Excel workbooks (.XLSX).
+* Because data was entered manually into the worksheets and mistakes were made.because data was entered manually into the worksheets and mistakes were made.
+
+* best practice is to evaluate the column data types in Power Query Editor before you load the data into a Power BI semantic model
+
+## IMPLICATIONS OF INCORRECT DATA TYPES
+* Incorrect data types will prevent you from creating certain calculations, deriving hierarchies, or creating proper relationships with other tables.
+* Another issue with having an incorrect data type applied on a date field is the inability to create a date hierarchy, which would allow you to analyze your data on a yearly, monthly, or weekly basis.
+
+## CHANGE THE COLUMN DATA TYPE
+* **Power Query Editor**, you can change the column data type in two ways.
+* One way is to select the column that has the issue, select Data Type in the Transform tab, and then select the correct data type from the list.
+
