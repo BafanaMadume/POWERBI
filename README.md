@@ -333,3 +333,74 @@ You may encounter different types of errors in Power BI that are caused by the d
 ---
 
 # CLEAN ,TRANSFORM ,AND LOAD DATA IN POWER BI
+When examining the data, you discover several issues, including:
+
+- A column called Employment status only contains numerals.
+- Several columns contain errors.
+- Some columns contain null values.
+- The customer ID in some columns appears as if it was duplicated repeatedly.
+- A single address column has combined street address, city, state, and zip code.
+
+### Clean data has the following advantages:
+
+- Measures and columns produce more accurate results when they perform aggregations and calculations.
+- Tables are organized, where users can find the data in an intuitive manner.
+- Duplicates are removed, making data navigation simpler. It will also produce columns that can be used in slicers and filters.
+- A complicated column can be split into two, simpler columns. Multiple columns can be combined into one column for readability.
+- Codes and integers can be replaced with human readable values.
+
+## SHAPE THE INITIAL DATA
+- Power Query Editor in Power BI Desktop allows you to shape (transform) your imported data.
+- accomplish actions such as renaming columns or tables, changing text to numbers, removing rows, setting the first row as headers
+
+### GET STARTED WITH POWER QUERY EDITOR
+* start shaping your data, open Power Query Editor by selecting the Transform data option on the Home tab of Power BI Desktop
+* The data in your selected query displays in the middle of the screen and, on the left side, the Queries pane lists the available queries (tables)
+*  Power Query Editor only makes changes to a particular view of your data, so you can feel confident about changes that are being made to your original data source.
+
+## STEPS IN SHAPING YOUR DATA
+
+## 1. IDENTIFY COLUMN HEADERS AND NAMES
+*  first step in shaping your initial data is to identify the column headers and names within the data and then evaluate where they are located to ensure that they are in the right place
+*  When you have identified where the column headers and names are located, you can make changes to reorganize the data.
+
+### PROMOTE HEADERS
+* When a table is created in Power BI Desktop ,Power Query Editor assumes that all data belongs in table rows.
+* Promote headers in two ways:
+   1. By selecting the Use First Row as Headers option on the Home tab
+   2. By selecting the drop-down button next to Column1 and then selecting Use First Row as Headers.
+ 
+ ## 2.RENAME COLUMNS
+ The next step in shaping your data
+ * is to examine the column headers , might discover that one or more columns have the wrong headers, a header has a spelling error, or the header naming convention is not consistent or user-friendly.
+
+###  Can rename column headers in two ways
+1. Rename column headers in two ways.
+2. Alternatively, you can double-click the column header and overwrite the name with the correct name
+3. Work around this issue by removing (skipping) the first two rows and then renaming the columns to the correct name.
+
+### REMOVE TOP ROWS
+*  you might need to remove some of the top rows,are blank or if they contain data that you do not need in your reports
+*  To remove these excess rows, select Remove Rows > Remove Top Rows on the Home tab.
+
+### REMOVE COLUMNS
+key step in the data shaping process is to remove unnecessary columns
+1.One way to remove columns would be to limit the column when you get data from data source. 
+
+* Removing columns at an early stage in the process rather than later is best, especially when you have established relationships between your tables.
+* Removing unnecessary columns will help you to focus on the data that you need and help improve the overall performance of your Power BI Desktop semantic models and reports
+
+**Can remove columns in two ways.** 
+1. To select the columns that you want to remove and then, on the Home tab, select Remove Columns.
+2. you can select the columns that you want to keep and then, on the Home tab, select Remove Columns > Remove Other Columns.
+
+## PIVOT COLUMNS
+* If the data that you are shaping is flat (in other words, it has lot of detail but is not organized or grouped in any way)
+* Pivot Column feature to convert your flat data into a table that contains an aggregate value for each unique value in a column. For example, you might want to use this feature to summarize data by using different math functions such as ,``**Minimum**``, ``**Maximum**``,`` **Median**``, ``**Average**``, or ``**Sum**``.
+
+* On the Transform tab, select Transform > Pivot Columns.
+
+* Power Query Editor records all steps that you take to shape your data, and the list of steps are shown in the Query Settings pane.
+* If you have made all the required changes, select Close & Apply to close Power Query Editor and apply your changes to your semantic model.
+
+## SIMPLIFY THE DATA STRUCTURE
