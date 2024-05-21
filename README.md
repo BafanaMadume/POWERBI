@@ -444,3 +444,5 @@ good practice to change uncommon or unhelpful query names to names that are more
 * **Power Query Editor**, you can change the column data type in two ways.
 * One way is to select the column that has the issue, select Data Type in the Transform tab, and then select the correct data type from the list.
 
+## EVALUATE AND CHANGE COLUMN DATA TYPES
+
