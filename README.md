@@ -404,3 +404,5 @@ key step in the data shaping process is to remove unnecessary columns
 * If you have made all the required changes, select Close & Apply to close Power Query Editor and apply your changes to your semantic model.
 
 ## SIMPLIFY THE DATA STRUCTURE
+
+### Rename A Query
