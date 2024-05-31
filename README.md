@@ -446,3 +446,21 @@ good practice to change uncommon or unhelpful query names to names that are more
 
 ## EVALUATE AND CHANGE COLUMN DATA TYPES
 
+* When you import a table from any data source, Power BI Desktop automatically starts scanning the first 1,000 rows (default setting) and tries to detect the type of data in the columns.
+You have a higher chance of getting data type errors when you're dealing with flat files, such as comma-separated values (.CSV) files and Excel workbooks (.XLSX), because data was entered manually into the worksheets and mistakes were made.
+* Another issue with having an incorrect data type applied on a date field is the inability to create a date hierarchy, which would allow you to analyze your data on a yearly, monthly, or weekly basis.
+* It's a best practice to use a date table and turn off the auto date/time to get rid of the auto generated hierarchy.
+
+## CHANGE THE COLUMN DATA TYPE
+*  can change the data type of a column in two places: in ``**Power Query Editor**`` and in the ``**Power BI Desktop Report**`` view by using the column tools.
+*  best to change the data type in the Power Query Editor before you load the data
+
+### CHANGE THE COLUMN DATA TYPE IN POWER QUERY EDITOR
+*  Power Query Editor, you can change the column data type in two ways
+  1. Is to select the column that has the issue, select Data Type in the Transform tab, and then select the correct data type from the list.
+![Screenshot 2024-05-31 114033](https://github.com/BafanaMadume/POWERBI/assets/141032267/ce0c5b6f-d3ea-4c00-a958-dec893a5c9fc)
+
+2.  is to select the data type icon next to the column header and then select the correct data type from the list.
+![Screenshot 2024-05-31 114344](https://github.com/BafanaMadume/POWERBI/assets/141032267/81066254-c559-4bc6-a6b5-fc2b534df016)
+
+
