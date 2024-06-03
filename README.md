@@ -461,6 +461,26 @@ You have a higher chance of getting data type errors when you're dealing with fl
 ![Screenshot 2024-05-31 114033](https://github.com/BafanaMadume/POWERBI/assets/141032267/ce0c5b6f-d3ea-4c00-a958-dec893a5c9fc)
 
 2.  is to select the data type icon next to the column header and then select the correct data type from the list.
+
 ![Screenshot 2024-05-31 114344](https://github.com/BafanaMadume/POWERBI/assets/141032267/81066254-c559-4bc6-a6b5-fc2b534df016)
 
+* the change that you make to the column data type is saved as a programmed step.The Step is called ``Changed Type `` and it will be iterated every time the data is refreshed.
+
+
+## COMBINE MULTIPLE TABLES INTO A SINGLE TABLE
+
+* WHEN WE HAVE THE ABILITY TO COMBINE QUERIES IT IS POWERFUL because it allows one to append or merge different tables or queries together
+
+* can combine tables into a single table in the following circumstances:
+  - Too many tables exist, making it difficult to navigate an overly complicated semantic model.
+  - Several tables have a similar role.
+  - A table has only a column or two that can fit into a different table.
+  - You want to use several columns from different tables in a custom column.
+ 
+  Two ways of combining ,we have ``**Merging**`` and ``**Appending**``
+
+  ## APPEND QUERIES
+  * when you append queries ,you'll be adding rows of data to another table or query
+  *  When you merge queries, you'll be adding columns from one table (or query) into another.
+  *  To merge two tables, you must have a column that is the key between the two tables.
 
