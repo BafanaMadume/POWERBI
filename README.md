@@ -485,4 +485,66 @@ You have a higher chance of getting data type errors when you're dealing with fl
   *  To merge two tables, you must have a column that is the key between the two tables.
 
 * the pertinent columns that you require in your combined table must be named the same in your original data tables to see one consolidated view.
-* 
+* Before you begin combining queries, you can remove extraneous columns that you don't need for this task from your tables.
+* To complete this task, format each table to have only four columns with your pertinent information, and rename them so they all have the same column headers: ID, company, name, and phone.
+* After you have finished reformatting, you can combine the queries
+* **On the Home tab on the Power Query Editor ribbon, select the drop-down list for Append Queries. You can select Append Queries as New, which means that the output of appending will result in a new query or table, or you can select Append Queries, which will add the rows from an existing table into another**
+
+## MERGE QUERIES
+* When you merge queries, you're combining the data from multiple tables into one based on a column that is common between the tables.
+
+* ``**Left Outer**`` - Displays all rows from the first table and only the matching rows from the second.
+
+* ``**Full Outer**`` - Displays all rows from both tables.
+
+* ``**Inner - Displays**`` the matched rows between the two tables.
+
+## PROFILE DATA IN POWER
+
+* Profiling data is about studying the nuances of the data: determining anomalies, examining and developing the underlying data structures, and querying data statistics such as row counts, value distributions, minimum and maximum values, averages.
+* This concept is important because it allows you to shape and organise the data so that interacting with the data is structured and contained within the tables
+
+## EXAMINE DATA STRUCTURES
+* you can view current semantic model under the MODAL tab on Power BI Desktop
+* Model tab  can edit specific column and table properties by selecting a table or columns,
+* Transform the data by using the Transform Data button, which takes you to Power Query Editor
+
+## FIND DATA ANOMALIES AND DATA STATISTICS
+
+* After a creation of a connection to a data source and have selected **Transform Data** you are brought to Power Query Editor
+* Determining what those anomalies are can help you identify what the normal distribution of your data looks like and whether specific data points exist that you need to investigate further.
+* Power Query Editor determines data anomalies by using the Column Distribution feature.
+
+* Select View on the ribbon, and under Data Preview, you can choose from a few options.
+* To understand data anomalies and statistics ,select the **Column Distribution**,Column Quality and column profile options
+
+* ``Column Distribution``
+=  shows you the distribution of the data within the column and the counts of distinct and unique values, both of which can tell you details about the data counts.
+* Distinct values are all the different values in a column, including duplicates and null values, while unique values do not include duplicates or nulls
+*  distinct in this table tells you the total count of how many values are present, while unique tells you how many of those values only appear once.
+
+*  ``Column Profile``
+*   gives you a more in-depth look into the statistics within the columns for the first 1,000 rows of data.
+*   This column provides several different values, including the count of rows, which is important when verifying whether the importing of your data was successful.
+
+*  ``Column Statistics``
+*  will also include how many zeroes and null values exist, along with the average value in the column
+*  the standard deviation of the values in the column, and how many even and odd values are in the column.
+*  These statistics give you an idea of the distribution of data within the column, and are important because they summarize the data in the column and serve as a starting point to determine what the outliers are.
+
+## USE ADVANCED EDITOR TO MODIFY M code
+* Each time you shape data in Power Query, you create a step in the Power Query process.
+* Those steps can be reordered, deleted, and modified where it makes sense
+*  The M language is always available to be read and modified directly
+*  After creating steps to clean data, select the View ribbon of Power Query and then select Advanced Editor.
+
+
+Questions
+1. What is a risk of having null values in a numeric column? =
+=AVERAGE takes the total and divides by the number of non-null values. If NULL is synonymous with zero in the data, the average will be different from the accurate average.
+
+2.  If you have two queries that have different data but the same column headers, and you want to combine both tables into one query with all the combined rows, which operation should you perform?
+   = Append will take two tables and combine it into one query. The combined query will have more rows while keeping the same number of columns.
+
+3.  Which of the following selections aren't best practices for naming conventions in Power BI?
+  = Abbreviations lead to confusion because they're often overused or not universally agreed on.
