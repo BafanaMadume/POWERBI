@@ -548,3 +548,5 @@ Questions
 
 3.  Which of the following selections aren't best practices for naming conventions in Power BI?
   = Abbreviations lead to confusion because they're often overused or not universally agreed on.
+
+# MODEL DATA WITH POWER BI
