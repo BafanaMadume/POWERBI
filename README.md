@@ -484,3 +484,5 @@ You have a higher chance of getting data type errors when you're dealing with fl
   *  When you merge queries, you'll be adding columns from one table (or query) into another.
   *  To merge two tables, you must have a column that is the key between the two tables.
 
+* the pertinent columns that you require in your combined table must be named the same in your original data tables to see one consolidated view.
+* 
