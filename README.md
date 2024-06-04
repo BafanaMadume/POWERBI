@@ -582,3 +582,17 @@ Questions
 *  Date dimension table, which contains one row for each date, is a common example of a concept dimension table.columns in dimension tables allow filtering and grouping of fact table data.
 *  Each dimension table must have a unique column, which is referred to as its key column, A unique column doesn't contain duplicate values and it should never have missing values
 *  Product dimension table ,the column could be named **ProductKey** or **ProductID**, additional columns will store descriptive values
+
+## Analytic queries
+* analytic query is a query that produces a result from a semantic model.
+* Each Power BI visual, in the background, submits an analytic query to Power BI to query the model.
+*  The analytic query is written as a Data Analysis Expressions (DAX) query statement.
+*  analytic query has three phases that are implemented in the following order
+  
+  1. **Filter** =it targets the data of relevance , Filtering is also applied in the background when row-level security (RLS) is enforced.
+ 
+  2.**Group** = or dicing, divides query results into groups,
+ 
+  3. **Summarize** = numeric columns are summarized by using summarization methods (sum, count, and many others). These methods are simple summarizations. More complex summarizations, like a percent of grand total, can be achieved by defining measures that are written in DAX.
+
+ ![Screenshot 2024-06-04 130156](https://github.com/BafanaMadume/POWERBI/assets/141032267/280b1292-fefd-4621-87a7-85930507a8cd)
