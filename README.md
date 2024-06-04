@@ -570,3 +570,15 @@ Questions
 ## STAR SCHEMA DESIGN
 * A single-table model can be a simple design, perhaps one that's suitable for a data exploration task or proof of concept
 * An optimal model adheres to star schema design principles.
+* Star schema refers to a design approach that's commonly used by relational data warehouse designers because it presents a user-friendly structure and it supports high-performance analytic queries
+* This design principle is called a star schema because it classifies model tables as either fact or dimension
+
+## Fact Tables
+
+* Role of a fact table is to store an accumulation of rows that represent observations or events that record a specific business activity
+
+## Dimension Tables
+* Dimension tables describe your business entities, which commonly represent ``people``, ``places``, ``products``, or ``concepts``.
+*  Date dimension table, which contains one row for each date, is a common example of a concept dimension table.columns in dimension tables allow filtering and grouping of fact table data.
+*  Each dimension table must have a unique column, which is referred to as its key column, A unique column doesn't contain duplicate values and it should never have missing values
+*  Product dimension table ,the column could be named **ProductKey** or **ProductID**, additional columns will store descriptive values
