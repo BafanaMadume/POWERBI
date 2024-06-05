@@ -596,3 +596,71 @@ Questions
   3. **Summarize** = numeric columns are summarized by using summarization methods (sum, count, and many others). These methods are simple summarizations. More complex summarizations, like a percent of grand total, can be achieved by defining measures that are written in DAX.
 
  ![Screenshot 2024-06-04 130156](https://github.com/BafanaMadume/POWERBI/assets/141032267/280b1292-fefd-4621-87a7-85930507a8cd)
+
+# Configure Report Visuals
+* Report authors produce report designs by adding report visuals and other elements to pages,Other elements include text boxes, buttons, shapes, and images. Each of these elements is configured independently of semantic model fields.
+
+* Fields is a collective term that is used to describe a model resource that can be used to configure a visual. The three different model resources that are fields include:
+
+- Columns
+- Hierarchy levels
+- Measures
+
+## COLUmNS 
+*  columns to filter, group, and summarize column values. Summarizing numeric columns is common, and it can be done by using sum, count, distinct count, minimum, maximum, average, median, standard deviation, or variance.
+*  also summarize text columns by using first (alphabetic order), last, count, or distinct count. Additionally, you can summarize date columns by using earliest, latest, count, or distinct count.
+
+## HIERARCHY LEVELS
+* hierarchy levels are based on columns, they can be used to filter and group but not to summarize.
+* Report authors can summarize the column that the hierarchy level is based on, provided that it's visible in the Fields pane.
+
+## MEASURES
+* Measures are designed to summarize model data; they can't be used to group data.
+* measures can be used to filter data in one special case: to use a measure to filter a visual when the visual displays the measure and the filter is a visual-level filter (so, not a report or page-level filter).
+* a measure filter is applied after the analytic query has summarized data.
+
+questions
+
+1. In a Power BI Desktop model design, which type of object do you create to connect multiple tables?
+   - A relationship connects two tables together to allow filtering and further analysis.
+
+2.  Which of the following statements is correct regarding a star schema design?
+   -  Fact tables store accumulations of business events, like sales orders or currency exchange rates.
+
+3. In what order does an analytic query implement its phases?
+   -  Filter is used to first restrict the data to query. Group then divides the query result into groups. Summarize then produces single value aggregations for each group.
+
+
+# Choose a Power B model framework
+ Microsoft continues to make deep investments in enterprise **business intelligence (BI)**. **Azure Analysis Services (AAS)** and **SQL Server Analysis Services (SSAS)** are based on mature BI data modeling technology used by countless enterprises.
+
+## DESCRIBE POWER BI model Fundamentals
+
+* ``Data model``
+* ``Power Bi dataset``
+* ``Analytic query``
+* ``Tabular model``
+* ``Star schema design``
+* ``Table storage mode``
+* ``Model framework``
+
+### Data Model
+* Power BI data model is a query-able data resource that’s optimized for analytics.
+* Reports can query data models by using one of two analytic languages: **Data Analysis Expressions (DAX)** or **Multidimensional Expressions (MDX)**
+
+### POWER BI DATASET
+* We develop a Power BI model in a  Power BI Desktop,
+* once published to a workspace in the Power BI service, it’s then known as a dataset
+* ``Dataset``is a Power BI artifact that’s a source of data for visualizations in Power BI reports and dashboards.
+
+### Analytic query
+* Power BI reports and dashboards must query a dataset.
+* An analytic query produces a query result from a model that’s easy for a person to understand, especially when visualized.
+* An analytic query has three phases that are executed in this order
+1. Filter
+2. Group
+3. Summarize
+
+**Filtering** =  (sometimes known as slicing) narrows down on a subset of the model data.Filter values aren’t visible in the query result analytic queries apply filters because it’s common to filter by a time period, and usually other attributes.
+* In a Power BI report, you can set filters at report, page, or visual level.
+* Report layouts often include slicer visuals to filter visuals on the report page.
