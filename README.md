@@ -664,3 +664,27 @@ questions
 **Filtering** =  (sometimes known as slicing) narrows down on a subset of the model data.Filter values aren’t visible in the query result analytic queries apply filters because it’s common to filter by a time period, and usually other attributes.
 * In a Power BI report, you can set filters at report, page, or visual level.
 * Report layouts often include slicer visuals to filter visuals on the report page.
+
+## Star schema design
+* Star schema design is a mature modeling approach widely adopted by relational data warehouses. It requires you to classify model tables as either dimension or fact
+* Dimension tables describe business entities; the things you model. Entities can include products, people, places, and concepts including time itself. 
+A fact table contains dimension key columns that relate to dimension tables, and numeric measure columns
+A fact table forms the center of a star, and the related dimension tables form the points of the star.
+
+## Table Storage Mode
+* **import** = Queries retrieve data that’s stored, or cached, in the model
+* **DirectQuery** - Queries pass through to the data source
+* **Dual** - Queries retrieve stored data or pass through to the data source .Power Bi determines the most efficient plan ,striving to use cached data whenever possible
+
+## MODEL FRAMEWORK
+* Table storage mode settings determine the model framework, which can be either import, DirectQuery, or composite.
+*  import model comprises tables that have their storage mode property set to Import.
+*  DirectQuery model comprises tables that have their storage mode property set to DirectQuery
+
+## Determine when to develop an import model
+* import model comprises tables that have their storage mode property set to Import. It includes calculated tables, which you define with a DAX formula.
+* Support all Power BI data source types, including databases, files, feeds, web pages, dataflows, and more.
+* Can integrate source data. For example, one table sources its data from a relational database while a related table sources its data from a web page.
+* Support all DAX and Power Query (M) functionality.
+* Support calculated tables.
+* Deliver the best query performance. That’s because the data cached in the model is optimized for analytic queries (filter, group, and summarize) and the model is stored entirely in memory.
