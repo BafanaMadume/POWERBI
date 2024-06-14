@@ -744,3 +744,48 @@ A fact table forms the center of a star, and the related dimension tables form t
 
 3. Mousef is a business analyst at Adventure Works who wants to create a new model by extending the sales dataset, which is delivered by IT. Mousef wants to add a new table of census population data sourced from a web page. Which model framework should Mousef use?
 =  A composite model would comprise a DirectQuery source group containing the sales dataset tables, and an import source group containing the imported web page data.
+
+# DESIGN A SEMANTIC MODEL IN POWER BI
+
+*  If your data is coming in from more than one transactional system, before you know it, you can have dozens of tables that you have to work with.
+*  Building a great semantic model is about simplifying the disarray
+* A star schema is one way to simplify a semantic model, and you learn about the terminology and implementation of them in this module.
+
+**Good semantic model offers the following benefits:**
+
+* Data exploration is faster.
+* Aggregations are simpler to build.
+* Reports are more accurate.
+* Writing reports takes less time
+* Reports are easier to maintain in the future
+
+
+* Providing set rules for what makes a good semantic model is difficult because all data is different, and the usage of that data varies
+* a smaller semantic model is better because it performs faster and will be simpler to use.
+* a smaller semantic model is composed of fewer tables and fewer columns in each table that the user can see.
+* Removing unneeded columns to provide a more manageable number increases the likelihood that the user reads all column names.
+
+![Screenshot 2024-06-14 144318](https://github.com/BafanaMadume/POWERBI/assets/141032267/fed21b0c-80f7-485a-aad5-320f846c7df3)
+
+* Relationships are defined between tables through primary and foreign keys. Primary keys are column(s) that identify each unique, non-null data row.
+*  This process becomes important when you are referencing rows in a different table, which is what foreign keys do.
+*   Relationships between tables are formed when you have primary and foreign keys in common between different tables.
+*  Power BI allows relationships to be built from tables with different data sources, a powerful function that enables you to pull one table from Microsoft Excel and another from a relational database.
+
+## STAR SCHEMAS
+*  In a star schema, each table within your semantic model is defined as a dimension or a fact table,
+
+![Screenshot 2024-06-14 145631](https://github.com/BafanaMadume/POWERBI/assets/141032267/c8a3ef6d-80de-4a56-bddd-6a6793d22495)
+
+ **Fact tables** 
+* contain observational or event data values: sales orders, product counts, prices, transactional dates and times, and quantities.
+* Fact tables can contain several repeated values
+* The numbers can be units of measurement, such as sale amount, or they can be keys, such as a customer ID.
+* The dates represent time that is being recorded, like order date or shipped date.
+
+**Dimension tables**
+*  contain the details about the data in fact tables: products, locations, employees, and order types.
+* These tables are connected to the fact table through key columns. Dimension tables are used to filter and group the data in fact tables.
+* The fact tables, on the other hand, contain the measurable data, such as sales and revenue, and each row represents a unique combination of values from the dimension tables.
+* Fact tables are much larger than dimension tables because numerous events occur in fact tables, such as individual sales.
+*  Dimension tables are typically smaller because you are limited to the number of items that you can filter and group on
