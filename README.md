@@ -688,3 +688,59 @@ A fact table forms the center of a star, and the related dimension tables form t
 * Support all DAX and Power Query (M) functionality.
 * Support calculated tables.
 * Deliver the best query performance. That’s because the data cached in the model is optimized for analytic queries (filter, group, and summarize) and the model is stored entirely in memory.
+
+## DETERMINE WHEN TO DEVELOP A COMPOSITE MODEL
+
+* Composite model comprises more than one source group.
+* There's always the import source group and a DirectQuery source group
+
+## COMPOSITE MODEL BENEFITS 
+* Composite model provide you with design flexibility
+* Can integrate data using different storage modes ,striking the right balance imported data and pass-through data
+* Composite models can also boost the performance of a DirectQuery model by providing Power BI with opportunity to satisfy some analytic queries from imported data.
+* Querying cached data almost always performs better than pass-through queries.
+
+## COMPOSITE MODEL LIMITATIONS
+
+1. Import (or dual, as described later) storage mode tables still require periodic refresh. Imported data can become out of sync with DirectQuery sourced data, so it’s important to refresh it periodically.
+2. When an analytic query must combine imported and DirectQuery data, Power BI must consolidate source group query results, which can impact performance.
+3. When chaining models (DirectQuery to Power BI datasets), modifications made to upstream models can break downstream models.
+4. Relationships between tables from different source groups are known as limited relationships. A model relationship is limited when the Power BI can’t determine a “one” side of a relationship.
+
+## BOOST DIRECTQUERY MODEL PERFORMANCE WITH IMPORT DATA
+
+### IMPORT AGGREGATION TABLES
+* You can add import storage mode user-defined aggregation tables or enable automatic aggregations
+* Power BI directs higher-grain fact queries to a cached aggregation
+* To boost query performance further, ensure that related dimension tables are set to use dual storage mode
+
+### DUAL STORAGE MODE
+* dual storage mode table is set to use both import and DirectQuery storage modes
+* At query time, Power BI determines the most efficient mode to use. Whenever possible
+* Power BI attempts to satisfy analytic queries by using cached data.
+* Dual storage mode tables work well with import aggregation tables. They allow Power BI to satisfy higher-grain queries entirely from cached data.
+* Slicer visuals and filter card lists, which are often based on dimension table columns, render more quickly because they’re queried from cached data
+
+## DELIVER REL TIME DATA FROM AN IMPORT MODEL
+* When Power BI queries a hybrid table, the query uses the cache for older data, and passes through to the data source to retrieve current data.
+
+## CHOOSE A MODEL FRAMEWORK
+*  It especially applies to enterprise solutions, where data volumes are large, query throughput is high
+* importantly, choose the import model framework whenever possible. This framework offers you the most options, design flexibility, and delivers fast performance.
+* Choose the DirectQuery model framework when your data source stores large volumes of data and/or your report needs to deliver near real-time data.
+
+**Choose the composite model framework to:**
+* Boost the query performance of a DirectQuery model.
+* Deliver near real-time query results from an import model.
+* Extend a Power BI dataset (or AAS model) with additional data.
+
+* boost the query performance of a DirectQuery model by using aggregation tables, which can use import or DirectQuery storage mode
+
+1. Geoffrey is a data modeler at Adventure Works who developed a DirectQuery model that connects to the data warehouse. To improve the query performance of higher-grain sales queries, Geoffrey added an import aggregation table. What else should Geoffrey do to improve query performance of the higher-grain queries?
+= **Setting the related dimension tables to dual storage mode will allow Power BI to satisfy higher-grain queries entirely from cache.**
+
+2. Breana is a data modeler at Adventure Works who developed a manufacturing model, which is an import model. Breana needs to ensure that manufacturing reports deliver real-time results. Which type of table should Breana create?
+= A hybrid table includes a DirectQuery partition for the current period to deliver near-real time results.
+
+3. Mousef is a business analyst at Adventure Works who wants to create a new model by extending the sales dataset, which is delivered by IT. Mousef wants to add a new table of census population data sourced from a web page. Which model framework should Mousef use?
+=  A composite model would comprise a DirectQuery source group containing the sales dataset tables, and an import source group containing the imported web page data.
