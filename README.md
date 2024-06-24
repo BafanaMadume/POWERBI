@@ -789,3 +789,37 @@ A fact table forms the center of a star, and the related dimension tables form t
 * The fact tables, on the other hand, contain the measurable data, such as sales and revenue, and each row represents a unique combination of values from the dimension tables.
 * Fact tables are much larger than dimension tables because numerous events occur in fact tables, such as individual sales.
 *  Dimension tables are typically smaller because you are limited to the number of items that you can filter and group on
+*  When creating this relationship, you can build the visual according to the requirements, as shown in the following figure.
+*  Star schemas and the underlying semantic model are the foundation of organized reports; the more time you spend creating these connections and design, the easier it will be to create and maintain reports.
+
+# WORK WITH TABLES
+* When users see fewer tables, they will enjoy using your semantic model considerably more.
+
+## SIMPLE TABLE STRUCTURE
+* Be **simple to navigate because of column and table** properties that are specific and user-friendly.
+* Have **merged or appended tables** to simplify the tables within your data structure.
+* Have **good-quality relationships** between tables that make sense
+
+## CONFIGURE SEMANTIC MODEL AND BUILD RELATONSHIPS BETWEEN TABLES
+* To manage these relationships, go to Manage Relationships on the ribbon
+* you can create, edit, and delete relationships between tables and also autodetect relationships that already exist
+*  When you load your data into Power BI, the Autodetect feature will help you establish relationships between columns that are named similarly
+*  Relationships can be inactive or active
+*  Only one active relationship can exist between tables
+*  Manage Relationships feature allows you to configure relationships between tables, you can also configure table and column properties to ensure organization in your table structure
+
+## CONFIGURE TABLE AND COLUMN PROPERTIES
+* Model view in Power BI desktop provides many options within the column properties that you can view or update.
+*  A simple method to get to this menu to update the tables and fields is by Ctrl+clicking or Shift+clicking items on this pag
+
+![Screenshot 2024-06-24 101015](https://github.com/BafanaMadume/POWERBI/assets/141032267/e6a1978a-39a9-4118-87f8-d4dca454b2c8)
+
+**UNDER THE GENERAL TAB**
+* Edit the name and description of the column.
+* Add synonyms that can be used to identify the column when you are using the Q&A feature
+* Add a column into a folder to further organize the table structure.
+* Hide or show the column.
+
+**Formatting tab**
+
+
