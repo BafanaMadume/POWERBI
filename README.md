@@ -820,6 +820,34 @@ A fact table forms the center of a star, and the related dimension tables form t
 * Add a column into a folder to further organize the table structure.
 * Hide or show the column.
 
-**Formatting tab**
+## CREATE A DATE TABLE
 
+* During report creation in Power BI, a common business requirement is to make calculations based on date and time. Organizations want to know how their business is doing over months, quarters, fiscal years, and so on
+* Power BI autodetects for date columns and tables; however, situations can occur where you will need to take extra steps to get the dates in the format that your organization requires.
 
+## CREATE A COMMON DATE TABLE
+**Ways that you can build a common date table are**
+* Source data
+* DAX
+* Power Query
+
+## SOURCE DATA
+Source databases and data warehouses already have their own date tables,. If the administrator who designed the database did a thorough job, these tables can be used to perform the following tasks:
+
+*  Identify company holidays
+*  Separate calendar and fiscal year
+*  Identify weekends versus weekdays
+
+## DAX
+* Data Analysis Expression (DAX)
+* functions **CALENDARAUTO()** or **CALENDAR()** to build your common date table
+* The **CALENDAR()** function returns a contiguous range of dates based on a start and end date that are entered as arguments in the function
+* The **CALENDARAUTO()** function returns a contiguous, complete range of dates that are automatically determined from your semantic model
+* . The starting date is chosen as the earliest date that exists in your semantic model, and the ending date is the latest date that exists in your semantic model plus data that has been populated to the fiscal month that you can choose to include as an argument in the CALENDARAUTO() function.
+
+![Screenshot 2024-06-25 095715](https://github.com/BafanaMadume/POWERBI/assets/141032267/72965d58-0e76-4346-8bd4-f2f5394589b8)
+
+* Year = YEAR(Dates[Date])
+* MonthNum = MONTH(Dates[Date])
+* WeekNum = WEEKNUM(Dates[Date])
+* DayoftheWeek = FORMAT(Dates[Date], "DDDD")
