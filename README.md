@@ -872,3 +872,9 @@ Source databases and data warehouses already have their own date tables,. If the
 ## WORK WITH DIMENSIONS
 * When building a star schema, you will have dimension and fact tables. Fact tables contain information about events such as sales orders, shipping dates, resellers, and suppliers.
 *  Dimension tables store details about business entities, such as products or time, and are connected back to fact tables through a relationship.
+
+## Hierarchies
+
+When you are building visuals, Power BI automatically enters values of the date type as a hierarchy 
+
+# 
