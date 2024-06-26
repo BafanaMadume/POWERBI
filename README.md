@@ -877,4 +877,140 @@ Source databases and data warehouses already have their own date tables,. If the
 
 When you are building visuals, Power BI automatically enters values of the date type as a hierarchy 
 
-# 
+## WORK WITH RELATIONSHIPS AND CARDINALITY
+* Power BI has the concept of directionality to a relationship.
+* This directionality plays an important role in filtering data between multiple tables
+* When you load data, Power BI automatically looks for relationships that exist within the data by matching column names.
+*  Manage Relationships to edit these options manually.
+
+## RELATIONSHIP
+
+* Many-to-one (*:1) relationship
+* one-to-many (1: *) relationship
+
+- Describes a relationship in which you have many instances of a value in one column that are related to only one unique corresponding instance in another column.
+- Describes the directionality between fact and dimension tables.
+- Is the most common type of directionality and is the Power BI default when you are automatically creating relationships.
+
+![Screenshot 2024-06-26 092233](https://github.com/BafanaMadume/POWERBI/assets/141032267/ab969beb-63bd-4ec6-9aeb-a02141435194)
+
+**One-to-one(1,1) Relationship**
+- Describes a relationship in which only one instance of a value is common between two tables.
+- Requires unique values in both tables.
+- Is not recommended because this relationship stores redundant information and suggests that the model is not designed correctly. It is better practice to combine the tables.
+
+![Screenshot 2024-06-26 092545](https://github.com/BafanaMadume/POWERBI/assets/141032267/bb20d654-3997-4ed7-92b5-bc8edf85f2d7)
+
+**MANY-TO-MANY(.)**
+* Describes a relationship where many values are in common between two tables.
+* Does not require unique values in either table in a relationship.
+* Is not recommended; a lack of unique values introduces ambiguity and your users might not know which column of values is referring to what
+
+![Screenshot 2024-06-26 093542](https://github.com/BafanaMadume/POWERBI/assets/141032267/9fa7a06f-6b54-4303-9fc8-93b3b283cb1b)
+
+## CROSS-FILTER DIRECTION
+* Data can be filtered on one or both sides of a relationship.
+* With a single cross-filter direction:
+  - Only one table in a relationship can be used to filter the data. For instance, Table 1 can be filtered by Table 2, but Table2 cannot be filtered by Table 1.
+  - For a one-to-many or many-to-one relationship, the cross-filter direction will be from the "one" side, meaning that the filtering will occur in the table that has many values.
+
+* With both cross-filter directions or bi-directional cross-filtering:
+  - One table in a relationship can be used to filter the other. For instance, a dimension table can be filtered through the fact table, and the fact tables can be filtered through the dimension table.
+  - You might have lower performance when using bi-directional cross-filtering with many-to-many relationships.
+
+## CARDINALITY AND CROSS-FILTEr DIRECTION
+* For one-to-one relationships, the only option that is available is bi-directional cross-filtering
+* Data can be filtered on either side of this relationship and result in one distinct, unambiguous value
+* For many-to-many relationships, you can choose to filter in a single direction or in both directions by using bi-directional cross-filtering.
+* The ambiguity that is associated with bi-directional cross-filtering is amplified in a many-to-many relationship because multiple paths will exist between different tables
+* 
+
+## CHECK YOUR KNOWLEDGE
+1. What does data granularity mean?
+   = The level of detail in your data ,meaning that higher granularity means more detailed data
+**Correct. Data granularity refers to how finely or coarsely your data is divided or aggregated.**
+
+2. What is the difference between a fact table and a dimension table?
+   = Fact tables contain observational data while dimension tables contain information about specific entities within the data
+  **Correct. Fact tables contain observational data such as sales orders, employees, shipping dates, and so on, while dimension tables contain information about specific entities such as product IDs and dates**
+
+3. Choose the best answer to explain relationship cardinality?
+   = Cardinality is the measure of unique values in a table
+ **Correct. An example of high cardinality would be a Sales table as it has a high number of unique values.**
+
+---
+---
+---
+
+# WRITE DAX FORMULAS FOR POWER BI DESKTOP MODELS
+
+DAX = DATA Analysis Expressions (DAX) = we can add three types of calculations to your semantic models
+
+* Calculated tables
+* Calculated columns
+* Measures
+
+* DAX can also be used to define row-level security (RLS) rules, which are expressions that enforce filters over model tables.
+
+## CALCULATED TABLES
+* we can write a DAX formula to add a calculated table to the model
+* The formula can duplicate or transform existing model data, or create a series of data, to produce a new table.
+*  Calculated table data is always imported into your model, so it increases the model storage size and can prolong data refresh time.
+**A calculated table can't connect to external data; you need to use Power Query to accomplish that task**
+
+**A Calculated table can be useful in various scenarios**
+- Date tables
+- Role-playing dimensions
+- What-if analysis
+
+## DATE TABLES
+* Date tables are required to apply special time filters known as time intelligence.
+*  DAX time intelligence functions only work correctly when a date table is set up
+*  When your source data doesn't include a date table, you can create one as calculated tables by using the CALENDAR or CALENDARAUTO DAX functions.
+
+## ROLE -PLAYING DIMENSIONS
+* When two model tables have multiple relationships, it could be because your model has a role-playing dimension.
+* Microsoft Power BI models only allow one active relationship between tables, which in the model diagram is indicated as a solid line.
+* The active relationship is used by default to propagate filters, which in this case would be from the Date table to the OrderDateKey column in the Sales table.
+* Any remaining relationships between the two tables are inactive. In a model diagram, the relationships are represented as dashed lines. Inactive relationships are only used when they're expressly requested in a calculated formula by using the USERELATIONSHIP DAX function.
+
+## WHAT-IF Analysis
+* Power BI Desktop supports a feature called What-if parameters
+* When you create a what-if parameter, a calculated table is automatically added to your model.
+* What-if parameters allow report users to select or filter by values that are stored in the calculated table.
+* Measure formulas can use selected value(s) in a meaningful way.
+
+# WRITE DAX FORMULAS
+ * Each model calculation type, calculated table, calculated column, or measure is defined by its name, followed by the equals symbol (=), which is then followed by a DAX formula. Use the following template to create a model calculation:
+![Screenshot 2024-06-26 111717](https://github.com/BafanaMadume/POWERBI/assets/141032267/8f6bee22-b2f5-4e18-9f95-bcc3cce29aef)
+
+*  DAX formula consists of expressions that return a result. The result is either a table object or a scalar value. Calculated table formulas must return a table object; calculated column and measure formulas must return a scalar value (single value).
+
+**Formulas are assembled by using**
+
+* DAX functions
+* DAX operators
+* References to model objects
+* Constant values, like the number 24 or the literal text "FY" (abbreviation for fiscal year)
+* DAX variables
+* Whitespace
+
+## DAX functions
+* DAX is a functional language meaning that formulas rely on functions to accomplish specific goals. Typically, DAX functions have arguments that allow passing in variables
+* Formulas can use many function calls and will often nest functions within other functions.
+* In a formula, function names must be followed by parentheses. Within the parentheses,
+
+## DAX OPERATORS
+* Formulas also rely on operators, which can perform arithmetic calculations, compare values, work with strings, or test conditions.
+
+## TABLE REFERENCES
+* When you reference a table in a formula, officially, the table name is enclosed within single quotation marks
+
+![Screenshot 2024-06-26 114155](https://github.com/BafanaMadume/POWERBI/assets/141032267/b3584b9e-1dd8-43f7-9149-00d01c9f09b1)
+
+## DAX Data typeS
+![Screenshot 2024-06-26 115036](https://github.com/BafanaMadume/POWERBI/assets/141032267/817128e4-4e37-41b9-855e-1109a6911acf)
+
+Blank data type
+* The BLANK data type deserves a special mention. DAX uses BLANK for both database NULL and for blank cells in Excel. BLANK doesn't mean zero.
+* wo DAX functions are related to the BLANK data type: the BLANK DAX function returns BLANK, while the ISBLANK DAX function tests whether an expression evaluates to BLANK.
