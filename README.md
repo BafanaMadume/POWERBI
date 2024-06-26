@@ -1014,3 +1014,32 @@ DAX = DATA Analysis Expressions (DAX) = we can add three types of calculations t
 Blank data type
 * The BLANK data type deserves a special mention. DAX uses BLANK for both database NULL and for blank cells in Excel. BLANK doesn't mean zero.
 * wo DAX functions are related to the BLANK data type: the BLANK DAX function returns BLANK, while the ISBLANK DAX function tests whether an expression evaluates to BLANK.
+
+## Work with DAX Functions
+* Relationship navigation functions
+* Filter context modification functions
+* Iterator functions
+* Time intelligence functions
+* Path functions
+
+* The only difference is that in DAX, you pass in a column reference, whereas in Excel, you pass in a range of cells.
+
+## DISTINCTCOUNT function
+* Two useful DAX functions that aren't specific to modeling and that don't originate from Excel are **DISTINCTCOUNT** and **DIVIDE**.
+
+**DISTINCTCOUNT function**
+*  DISTINCTCOUNT DAX function to count the number of distinct values in a column.
+*  This function is especially powerful in an analytics solution.
+*  Consider that the count of customers is different from the count of distinct customers.
+
+**DIVIDE Function**
+* You can use the DIVIDE DAX function to achieve division.
+* You must pass in numerator and denominator expressions
+
+![Screenshot 2024-06-26 143449](https://github.com/BafanaMadume/POWERBI/assets/141032267/774868d0-ed65-4e2d-8d08-3c3fd8e5dd12)
+
+* The DIVIDE function automatically handles division by zero cases
+*  If an alternate result isn't passed in, and the denominator is zero or BLANK, the function returns BLANK.
+*  When an alternate result is passed in, it's returned instead of BLANK.
+*  We recommend that you use the DIVIDE function whenever the denominator is an expression that could return zero or BLANK.
+*  In the case that the denominator is a constant value, we recommend that you use the divide operator (/),
