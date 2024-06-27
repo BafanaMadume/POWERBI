@@ -98,3 +98,24 @@ Formulas also rely on operators
   - Use tabs to indent nested function calls.
   - Use carriage returns to separate function arguments, especially when it's too long to fit on a single line. Formatting in this way makes it simpler to troubleshoot, especially when the formula is missing a parenthesis.
   - Err on the side of too much whitespace than too little.
+ 
+![Screenshot 2024-06-27 112516](https://github.com/BafanaMadume/POWERBI/assets/141032267/42c5829a-ef8c-4c71-8bc8-fa4c7bb6778b)
+
+![Screenshot 2024-06-27 142815](https://github.com/BafanaMadume/POWERBI/assets/141032267/fea15c9d-977c-42f4-bf80-85b47c07a50f)
+![Screenshot 2024-06-27 142833](https://github.com/BafanaMadume/POWERBI/assets/141032267/71d30d09-8c08-4344-9c9c-e9f6cae79d43)
+
+# QUESTIONS
+1.
+![Screenshot 2024-06-27 132136](https://github.com/BafanaMadume/POWERBI/assets/141032267/e2d55e06-6724-43d6-8c5c-871933b69288)
+2.
+![Screenshot 2024-06-27 132307](https://github.com/BafanaMadume/POWERBI/assets/141032267/dc74b247-ed2c-440d-805f-15729f6e40a9)
+3.
+![Screenshot 2024-06-27 132615](https://github.com/BafanaMadume/POWERBI/assets/141032267/33c0ee0c-dcba-4c86-8f88-332e18c399e1)
+4.
+![Screenshot 2024-06-27 132708](https://github.com/BafanaMadume/POWERBI/assets/141032267/8ef54bde-7d1c-44eb-81e0-bd7b3e82d8b9)
+5.
+![Screenshot 2024-06-27 132828](https://github.com/BafanaMadume/POWERBI/assets/141032267/ab8b3958-49f7-48b9-a730-b199dbe40da3)
+6.
+![Screenshot 2024-06-27 133139](https://github.com/BafanaMadume/POWERBI/assets/141032267/700649d2-fa95-44de-b862-19c97b2f21d1)
+7.
+![Screenshot 2024-06-27 134045](https://github.com/BafanaMadume/POWERBI/assets/141032267/03a91e8d-2c42-4eee-8726-9715cebbb60f)
